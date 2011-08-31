@@ -1,0 +1,23 @@
+{
+  "name": "Home Shortcut",
+  "version": "1.0.1",
+  "description": "Adds a keyboard shortcut for going to a site's home page.",
+  "icons": { 
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["onload.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": [
+    "tabs", "<all_urls>"
+  ]  
+}
